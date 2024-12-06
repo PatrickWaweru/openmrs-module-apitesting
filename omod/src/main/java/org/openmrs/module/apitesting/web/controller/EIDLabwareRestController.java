@@ -137,7 +137,7 @@ public class EIDLabwareRestController extends BaseRestController {
 	// @Authorized
     @RequestMapping(value = "/eidpull", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
-    public ResponseEntity get(@RequestParam(value = "mfl_code") String mflCode, @RequestParam(value = "order_no") String orderNo, HttpServletRequest request, HttpServletResponse response) throws ResponseException {
+    public ResponseEntity eidPull(@RequestParam(value = "mfl_code") String mflCode, @RequestParam(value = "order_no") String orderNo, HttpServletRequest request, HttpServletResponse response) throws ResponseException {
         System.out.println("API TESTING MODULE: EID Lab MOCK: Pull Results - MFL Code: " + mflCode + " || Order Nos. : " + orderNo);
 
 		String errorMessage = "{\n" + //

@@ -9,6 +9,6 @@
 
 	<artifactId>apitesting-api</artifactId>
 	<packaging>jar</packaging>
-	<name>Api testing API</name>
-	<description>API project for Api testing</description>
+	<name>OpenMRS testing API</name>
+	<description>Openmrs project for Api testing</description>
 </project>

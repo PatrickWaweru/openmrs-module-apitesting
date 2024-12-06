@@ -12,7 +12,6 @@ package org.openmrs.module.apitesting.api.impl;
 import org.openmrs.api.APIException;
 import org.openmrs.api.UserService;
 import org.openmrs.api.impl.BaseOpenmrsService;
-import org.openmrs.module.apitesting.Item;
 import org.openmrs.module.apitesting.api.ApitestingService;
 import org.openmrs.module.apitesting.api.dao.ApitestingDao;
 
@@ -36,17 +35,17 @@ public class ApitestingServiceImpl extends BaseOpenmrsService implements Apitest
 		this.userService = userService;
 	}
 	
-	@Override
-	public Item getItemByUuid(String uuid) throws APIException {
-		return dao.getItemByUuid(uuid);
-	}
+	// @Override
+	// public Item getItemByUuid(String uuid) throws APIException {
+	// 	return dao.getItemByUuid(uuid);
+	// }
 	
-	@Override
-	public Item saveItem(Item item) throws APIException {
-		if (item.getOwner() == null) {
-			item.setOwner(userService.getUser(1));
-		}
-		
-		return dao.saveItem(item);
-	}
+	// @Override
+	// public Item saveItem(Item item) throws APIException {
+	// 	if (item.getOwner() == null) {
+	// 		item.setOwner(userService.getUser(1));
+	// 	}
+	
+	// 	return dao.saveItem(item);
+	// }
 }

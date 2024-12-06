@@ -13,7 +13,6 @@ import org.openmrs.annotation.Authorized;
 import org.openmrs.api.APIException;
 import org.openmrs.api.OpenmrsService;
 import org.openmrs.module.apitesting.ApitestingConfig;
-import org.openmrs.module.apitesting.Item;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -30,9 +29,9 @@ public interface ApitestingService extends OpenmrsService {
 	 * @return
 	 * @throws APIException
 	 */
-	@Authorized()
-	@Transactional(readOnly = true)
-	Item getItemByUuid(String uuid) throws APIException;
+	// @Authorized()
+	// @Transactional(readOnly = true)
+	// Item getItemByUuid(String uuid) throws APIException;
 	
 	/**
 	 * Saves an item. Sets the owner to superuser, if it is not set. It can be called by users with
@@ -42,7 +41,7 @@ public interface ApitestingService extends OpenmrsService {
 	 * @return
 	 * @throws APIException
 	 */
-	@Authorized(ApitestingConfig.MODULE_PRIVILEGE)
-	@Transactional
-	Item saveItem(Item item) throws APIException;
+	// @Authorized(ApitestingConfig.MODULE_PRIVILEGE)
+	// @Transactional
+	// Item saveItem(Item item) throws APIException;
 }
